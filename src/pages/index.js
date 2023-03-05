@@ -1,5 +1,5 @@
 import React from 'react'
-import * as ga from "../pages/lib/ga"
+import * as ga from "../lib/ga"
 
 export default function Main() {
     ga.pageview("/home")
