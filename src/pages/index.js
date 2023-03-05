@@ -3,12 +3,11 @@ import * as ga from "../pages/lib/ga"
 
 export default function Main() {
     ga.pageview("/home")
-    const GAEventsTracker = ga.useGAEventsTracker("External Links");
   return (
     <>
     <div>Hello</div>
     <div>
-    <button onClick={() => GAEventsTracker("clicked")}>Search</button>
+    <button onClick={() => ga.event("clicked")}>Search</button>
 </div>
 </>
   )

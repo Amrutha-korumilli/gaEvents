@@ -8,10 +8,12 @@ export const pageview = (url) => {
   }
   
   // log specific events happening.
-  export const useGAEventsTracker = (category = "Event category")=>{
-    const trackEvent = (action = "action",label = "label")=>{
-        window.gtag({category,action,label})
-    }
-    return trackEvent;
-  }
+  export const event = ({ action, category, label, value }) => {
+    console.log("clicked")
+      window.gtag("event", action, {
+        event_category: category,
+        event_label: label,
+        value,
+      });
+    };
   
