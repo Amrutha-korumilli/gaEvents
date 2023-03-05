@@ -9,6 +9,7 @@ export const pageview = (url) => {
   
   // log specific events happening.
   export const event = ({ action, category, label, value }) => {
+    console.log(action)
     console.log("clicked")
       window.gtag("event", action, {
         event_category: category,
